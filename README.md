@@ -11,5 +11,8 @@ Currently Checks:
 
 ![image](https://github.com/PyroChiliarch/WinMisconfigScanner/assets/11240849/47bfa299-84e3-430f-99b0-a82a78825417)
 
+Note: While these configurations are dangerous, these are also features which some of your network may rely on.
+Blindly disabling these "features" without testing/planning may cause issues on your network.
+
 Please report any false positives/false negatives so I can fix them.
 Pull requests welcome aswell.
