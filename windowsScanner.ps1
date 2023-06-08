@@ -128,7 +128,8 @@ Write-Host "##### Network Configs #####"
 
 
 Write-Host ""
-Write-Host "# LLMNR"
+Write-Host "##### LLMNR"
+Write-Host "# https://www.blackhillsinfosec.com/how-to-disable-llmnr-why-you-want-to/"
 ### LLMNR is disabled
 $LLMNR = 1 #No value is on
 try 
@@ -164,7 +165,8 @@ else
 # Check if mDNS disabled in Registry
 # Only Disables systems the use the Windows resolver, other such as chrome have a built in resolver
 Write-Host ""
-Write-Host "# mDNS"
+Write-Host "##### mDNS"
+Write-Host "# https://techcommunity.microsoft.com/t5/networking-blog/mdns-in-the-enterprise/ba-p/3275777"
 try 
 {
     $Result = (Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters\").EnableMDNS 2>$null
@@ -261,7 +263,8 @@ else
 
 
 Write-Host ""
-Write-Host "# SMB"
+Write-Host "##### SMB"
+Write-Host "# https://techcommunity.microsoft.com/t5/storage-at-microsoft/configure-smb-signing-with-confidence/ba-p/2418102"
 # Check if SMB signing is enabled and enforced
 # Domain controllers use a different setting to enable SMB Signing, 
 # workstations and standard servers count as SMB clients as far as settings go
